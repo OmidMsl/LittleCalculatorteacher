@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_students">
+
+    <fragment
+        android:id="@+id/navigation_students"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.students.StudentsFragment"
+        android:label="@string/students"
+        tools:layout="@layout/fragment_students">
+        <action
+            android:id="@+id/action_StudentsFragment_to_TestsFragment"
+            app:destination="@id/navigation_tests" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tests"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.tests.TestsFragment"
+        android:label="@string/title_students"
+        tools:layout="@layout/fragment_tests">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_info"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.userInfo.UserInfoFragment"
+        android:label="@string/title_user_info"
+        tools:layout="@layout/fragment_user_info" />
+
+    <fragment
+        android:id="@+id/navigation_chats"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.chats.ChatsFragment"
+        android:label="@string/title_conversation"
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_navigation_chats_to_navigation_conversation"
+            app:destination="@id/navigation_conversation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_conversation"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.conversation.ConversationFragment"
+        android:label="@string/title_conversation"
+        tools:layout="@layout/fragment_conversation" />
+</navigation>
